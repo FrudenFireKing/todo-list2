@@ -11,6 +11,7 @@ plugins {
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
+        vendor = JvmVendorSpec.ADOPTIUM 
     }
 }
 
@@ -33,6 +34,8 @@ idea {
 
 repositories {
     mavenCentral()
+    maven { url "https://repo.spring.io/milestone" } 
+    maven { url "https://repo.spring.io/snapshot" }  
 }
 
 dependencies {
